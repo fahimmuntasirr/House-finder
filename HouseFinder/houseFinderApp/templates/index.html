@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+</head>
+<body>
+
+<div class="relative h-[80vh] w-full overflow-hidden">
+    <img
+            src="{% static 'public/Hero.jpg'%}"
+            alt="Hero Image"
+            class="h-full w-full object-cover"
+            style="aspect-ratio: 1920 / 1080; object-fit: cover;"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
+        <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">Find Your Perfect Home</h1>
+        <p class="mt-4 max-w-xl text-lg md:text-xl">
+            Discover the best rental properties in your area with our easy-to-use search tool.
+        </p>
+        <div class="mt-8">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                <a href="#featured_home" style="text-decoration: none; color: white;">Start Searching</a>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                <a href="/post/" style="text-decoration: none; color: white;">Post a Home</a>
+            </button>
+            {% if request.user.is_authenticated %}
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                <a href="/profile1/{{request.user.username}}/" style="text-decoration: none; color: white;">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                <a href="/logout_page/" style="text-decoration: none; color: white;">Logout</a>
+            </button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container mx-auto my-12 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <div class="space-y-2">
+            <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="location"
+            >
+                Location
+            </label>
+            <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="location"
+                    placeholder="Enter a city or neighborhood"
+            />
+        </div>
+        <div class="space-y-2">
+            <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="price-range"
+            >
+                Price Range
+            </label>
+            <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="price-range"
+                    placeholder="$500 - $2,000"
+            />
+
+        </div>
+        <div class="space-y-2">
+            <label
+                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    for="bedrooms"
+            >
+                Bedrooms
+            </label>
+            <input
+                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    id="bedrooms"
+                    placeholder="1-4"
+            />
+        </div>
+        <div class="flex items-end">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-primary/90 h-10 px-4 py-2 w-full">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto my-12 px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl" id="featured_home">Featured Homes</h2>
+        <p class="mt-4 text-gray-500">Check out our selection of the best rental properties.</p>
+    </div>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+            <img
+                    src="{% static 'public/image1.png'%}"
+                    alt="Home 1"
+                    class="h-48 w-full object-cover"
+
+                    style="aspect-ratio: 400 / 300; object-fit: cover;"
+            />
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Modern Apartment</h3>
+                <p class="mt-2 text-gray-500">$1,800/month</p>
+                <div class="mt-4">
+                    <a class="text-blue-500 hover:underline" href="product-page.html">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+            <img
+                    src="public/image2.png"
+                    alt="Home 2"
+                    class="h-48 w-full object-cover"
+                    width="400"
+                    height="300"
+                    style="aspect-ratio: 400 / 300; object-fit: cover;"
+            />
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Cozy Townhouse</h3>
+                <p class="mt-2 text-gray-500">$2,200/month</p>
+                <div class="mt-4">
+                    <a class="text-blue-500 hover:underline" href="product-page.html">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+            <img
+                    src="{% static 'public/image3.png'%}"
+                    alt="Home 3"
+                    class="h-48 w-full object-cover"
+                    width="400"
+                    height="300"
+                    style="aspect-ratio: 400 / 300; object-fit: cover;"
+            />
+            <div class="p-4">
+                <h3 class="text-lg font-bold">Luxury Penthouse</h3>
+                <p class="mt-2 text-gray-500">$3,500/month</p>
+                <div class="mt-4">
+                    <a class="text-blue-500 hover:underline" href="product-page.html">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<footer class="bg-gray-900 py-8 text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+            <div>
+                <h4 class="text-lg font-bold">About</h4>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Our Story
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Our Team
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Careers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold">Contact</h4>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Email Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Call Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Visit Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold">Legal</h4>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Terms of Service
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Disclaimer
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold">Follow Us</h4>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="#">
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500">© 2024 Home Rentals. All rights reserved.</div>
+    </div>
+</footer>
+
+
+
+
+<script type="module" src="/main.js"></script>
+</body>
+
+</html>

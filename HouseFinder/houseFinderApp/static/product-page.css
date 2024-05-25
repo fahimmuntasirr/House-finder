@@ -1,0 +1,473 @@
+.frame-child88 {
+  position: absolute;
+  top: -49px;
+  left: 0;
+  background: linear-gradient(180deg, #000, #fcfffe);
+  width: 1728px;
+  height: 316px;
+}
+.back-to-home1 {
+  position: relative;
+}
+.back-to-home-container {
+  position: absolute;
+  top: 109px;
+  left: 1465px;
+  border-radius: var(--br-6xs);
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs-5) 2.5px;
+  white-space: nowrap;
+  z-index: 1;
+}
+.rectangle-parent34,
+.wrapper-rectangle-6-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 267px;
+}
+.wrapper-rectangle-6-child {
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.196);
+}
+.wrapper-rectangle-6 {
+  height: 482px;
+  width: 547px;
+  position: relative;
+  border-radius: var(--br-lg) var(--br-lg) 0 var(--br-lg);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wonderful-flat-for {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.charabag-ashulia-dhaka {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  font-weight: 500;
+}
+.wonderful-flat-for-2-person-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) var(--padding-4xl) 0;
+  box-sizing: border-box;
+  gap: 10.6px;
+  max-width: 100%;
+  font-size: var(--font-size-21xl);
+}
+.content-a-page1,
+.it-is-long1 {
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+.that-it-has1 {
+  margin: 0;
+}
+.it-is-long-container1 {
+  position: relative;
+  font-weight: 500;
+}
+.it-is-long-established-fact-th-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-xl);
+  color: var(--text);
+  font-family: var(--font-inter);
+}
+.everyone,
+.the-flat-is {
+  position: relative;
+  font-weight: 500;
+}
+.everyone {
+  display: inline-block;
+  min-width: 108px;
+}
+.everyone-wrapper,
+.the-flat-is-for-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.everyone-wrapper {
+  flex-direction: row;
+  padding: 0 var(--padding-12xs);
+  color: var(--text);
+  font-family: var(--font-inter);
+}
+.the-flat-is-for-parent {
+  flex-direction: column;
+  padding: 0 var(--padding-xl) var(--padding-base) 0;
+  gap: var(--gap-base);
+}
+.contact1 {
+  display: inline-block;
+  min-width: 104px;
+}
+.contact-title,
+.contact1 {
+  position: relative;
+  font-weight: 500;
+}
+.contact-info,
+.wrapper-rectangle-6-parent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.contact-info {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-lg);
+  min-width: 751px;
+}
+.wrapper-rectangle-6-parent {
+  position: absolute;
+  top: 257.4px;
+  left: 84px;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--gap-33xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.header {
+  align-self: stretch;
+  height: 749px;
+  position: relative;
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.house-finder {
+  position: relative;
+  font-weight: 600;
+}
+.truest-love-this1,
+.welcome-and-open1 {
+  margin-block-start: 0;
+  margin-block-end: 4px;
+}
+.release-process1 {
+  margin: 0;
+}
+.welcome-and-open-container1 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  text-align: left;
+}
+.frame-child89 {
+  width: 99px;
+  height: 26px;
+  position: relative;
+}
+.house-finder-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 21.5px;
+  min-width: 359px;
+  max-width: 100%;
+}
+.quick-link1 {
+  position: relative;
+  font-weight: 600;
+}
+.about-us1,
+.causes1,
+.events1,
+.volunteers1 {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 109px;
+}
+.causes1,
+.events1,
+.volunteers1 {
+  min-width: 86px;
+}
+.events1,
+.volunteers1 {
+  min-width: 78px;
+}
+.volunteers1 {
+  min-width: 124px;
+}
+.link-list,
+.quick-link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.link-list {
+  gap: var(--gap-lg);
+  font-size: var(--font-size-5xl);
+}
+.quick-link-group {
+  gap: var(--gap-16xl);
+  min-width: 162px;
+}
+.our-address1 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-weight: 600;
+  text-align: center;
+}
+.free-to-contact1,
+.would-you-have1 {
+  margin: 0;
+}
+.would-you-have-container1 {
+  position: relative;
+  font-weight: 500;
+}
+.icons {
+  height: 16px;
+  width: 20px;
+  position: relative;
+}
+.nomanabdullah688gmailcom1 {
+  position: relative;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.contact-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.group-icon4 {
+  align-self: stretch;
+  width: 20px;
+  position: relative;
+  max-height: 100%;
+  min-height: 26px;
+}
+.placeholder {
+  position: relative;
+  font-weight: 500;
+}
+.group-parent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.zondiconslocation1 {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.savar-dhaka1 {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 124px;
+}
+.contact-details,
+.contact-icons1,
+.our-address-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.contact-details,
+.our-address-group {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-lg);
+  max-width: 100%;
+}
+.our-address-group {
+  gap: var(--gap-6xl);
+  min-width: 399px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+}
+.footer-content,
+.frame-parent59 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-parent59 {
+  justify-content: flex-start;
+  gap: var(--gap-181xl);
+  min-width: 761px;
+}
+.footer-content {
+  width: 1348px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.footer,
+.product-page {
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.footer {
+  align-self: stretch;
+  box-shadow: 0-2px 225.3px rgba(0, 0, 0, 0.1);
+  padding: var(--padding-25xl) var(--padding-161xl);
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--text);
+  font-family: var(--font-inter);
+}
+.product-page {
+  width: 100%;
+  height: 1249px;
+  position: relative;
+  padding: 0 0 500px;
+  gap: 176px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1500px) {
+  .contact-info,
+  .wrapper-rectangle-6-child {
+    flex: 1;
+  }
+  .wrapper-rectangle-6-parent {
+    flex-wrap: wrap;
+  }
+  .header {
+    height: auto;
+    min-height: 749;
+  }
+  .frame-parent59,
+  .house-finder-parent {
+    flex: 1;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+  }
+  .product-page {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1225px) {
+  .our-address-group,
+  .quick-link-group {
+    flex: 1;
+  }
+  .frame-parent59 {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+  .footer {
+    padding-left: var(--padding-71xl);
+    padding-right: var(--padding-71xl);
+    box-sizing: border-box;
+  }
+  .product-page {
+    gap: 88px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .wonderful-flat-for {
+    font-size: var(--font-size-13xl);
+  }
+  .contact-info {
+    min-width: 100%;
+  }
+  .house-finder {
+    font-size: var(--font-size-7xl);
+  }
+  .house-finder-parent {
+    min-width: 100%;
+  }
+  .our-address1,
+  .quick-link1 {
+    font-size: var(--font-size-7xl);
+  }
+  .our-address-group {
+    min-width: 100%;
+  }
+  .frame-parent59 {
+    gap: var(--gap-81xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .wonderful-flat-for {
+    font-size: var(--font-size-5xl);
+  }
+  .charabag-ashulia-dhaka,
+  .contact-title,
+  .contact1,
+  .everyone,
+  .house-finder,
+  .it-is-long-container1,
+  .the-flat-is {
+    font-size: var(--font-size-lgi);
+  }
+  .welcome-and-open-container1 {
+    font-size: var(--font-size-base);
+  }
+  .about-us1,
+  .causes1,
+  .events1,
+  .our-address1,
+  .quick-link1,
+  .volunteers1 {
+    font-size: var(--font-size-lgi);
+  }
+  .nomanabdullah688gmailcom1,
+  .placeholder,
+  .savar-dhaka1,
+  .would-you-have-container1 {
+    font-size: var(--font-size-base);
+  }
+  .frame-parent59 {
+    gap: var(--gap-31xl);
+  }
+  .footer {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .product-page {
+    gap: 44px;
+  }
+}

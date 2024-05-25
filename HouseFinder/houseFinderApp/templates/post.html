@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {%load static%}
+    <link rel="stylesheet" href="{% static './global.css'%}" />
+    <link rel="stylesheet" href="{% static './house-signup.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind Siliguri:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="house-signup">
+      <section class="input-fields">
+        <div class="input-fields-child"></div>
+        <div class="signup-button">
+          <div class="sign-up-parent1">
+            <b class="sign-up6">Update Your profile</b>
+            <div class="its-quick-and2">It's quick and easy.</div>
+            <div>
+              <img src="{% static 'public/hero.jpg'%}" alt="Nothing" style="border-radius: 10px; position: relative; left: 50%; transform: translateX(-50%); height: 300px;">
+            </div>
+          </div>
+        </div>
+        <span style="position: relative; margin-right: 79%; margin-bottom: -1%;">Upload a picture</span>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="name-input" style="margin-top: -20px;">
+            <div class="first-name-parent2" style="width: 100%;">
+              <input class="first-name5" placeholder="First name" type="text" name="first_name"/>
+
+              <div class="frame-child90"></div>
+            </div>
+          </div>
+          <span>Upload a picture</span>
+          <div class="input" style="margin-top: 10px;">
+            <div class="mobile-nuber-or-email-address-parent2">
+              <input
+                class="mobile-nuber-or4"
+                placeholder="Mobile nuber or email address"
+                type="text"
+                name="username"
+              />
+
+              <div class="frame-child92"></div>
+            </div>
+          </div>
+          <span>Upload a picture</span>
+          <div class="input1" style="margin-top: 10px;">
+            <div class="mobile-nuber-or-email-address-parent3">
+              <input
+                class="mobile-nuber-or5"
+                placeholder="Address"
+                type="text"
+                name="address"
+              />
+
+              <div class="frame-child93"></div>
+            </div>
+          </div>
+          <span>Upload a picture</span>
+          <div class="input" >
+            <div class="mobile-nuber-or-email-address-parent2">
+              <input
+                class="mobile-nuber-or4"
+                placeholder="Mobile nuber or email address"
+                type="file"
+                name="file"
+                style="height: 30px;"
+              />
+
+              <div class="frame-child92"></div>
+            </div>
+          </div>
+          <div class="birth-date">
+            <div class="month-selection">
+              
+            </div>
+          </div>
+          <div class="gender-selection">
+            <div class="gender-input">
+              <div class="gender2">Gender</div>
+            </div>
+            <div class="gender-options">
+              <div class="female-container">
+                <span>Bachelor</span>
+                <input class="female2" placeholder="Female" type="radio" name="gender"/>
+
+                <div class="frame-child97"></div>
+                <div class="gender-icon-wrapper">
+                  <div class="gender-icon"></div>
+                </div>
+              </div>
+              <div class="male-container">
+                <span>Girls</span>
+                <input class="male2" placeholder="Male" type="radio" name="gender" />
+
+                <div class="frame-child98"></div>
+                <div class="ellipse-wrapper4">
+                  <div class="frame-child99"></div>
+                </div>
+              </div>
+              <div class="custom-container">
+                <span>Family</span>
+                <input class="custom2" placeholder="Custom" type="radio" name="gender" />
+
+                <div class="frame-child100"></div>
+                <div class="ellipse-wrapper5">
+                  <div class="frame-child101"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-link-wrapper">
+            <div class="login-link">
+              <div class="signup-link">
+                <button class="signup-call-to-action" style="margin-top: 20px;">
+                  <b class="sign-up7" style="text-align: center;">Post</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

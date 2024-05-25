@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'global.css'%}" />
+    <link rel="stylesheet" href="{% static 'house-login.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind Siliguri:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="house-login">
+      <div class="funding-tools">
+        <div class="content1">
+          <h3 class="make-your-life">Make your life easy</h3>
+          <div class="we-help-local-container3">
+            <p class="we-help-local3">
+              We help local nonprofits accesss the funding tools,
+            </p>
+            <p class="training-and-support3">
+              training, and support they need to become more.
+            </p>
+          </div>
+        </div>
+      </div>
+      <form class="login-form1" method="post" enctype="multipart/form-data">
+        {% if messages %} {{message.tags}}
+        <div role="alert" style="color: red">
+          {% for message in messages %} {{ message }} {% endfor %}
+        </div>
+        {% endif %} {% csrf_token %}
+        <div class="rectangle-parent36">
+          <div class="frame-child104"></div>
+          <input
+            class="email-adderss-or2"
+            placeholder="Email adderss or phone number"
+            type="text"
+            name="username"
+          />
+        </div>
+        <div class="rectangle-parent37">
+          <div class="frame-child105"></div>
+          <input
+            class="password2"
+            placeholder="Password"
+            type="text"
+            name="password"
+          />
+        </div>
+        <button class="login-button">
+          <b class="log-in2">Log in</b>
+        </button>
+        <div class="password-reset">
+          <div class="forgotten-password2">Forgotten password?</div>
+        </div>
+        <div class="divider1"></div>
+        <div class="new-account-button-wrapper">
+          <p class="new-account-button">
+            <b class="create-new-account2"
+              ><a
+                href="/house_signup/"
+                style="text-decoration: none; color: white"
+                >Create new account</a
+              ></b
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

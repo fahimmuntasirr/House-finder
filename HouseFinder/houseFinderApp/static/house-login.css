@@ -1,0 +1,307 @@
+.make-your-life {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 52px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.we-help-local3 {
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+.training-and-support3 {
+  margin: 0;
+}
+.we-help-local-container3 {
+  width: 467px;
+  position: relative;
+  font-size: var(--font-size-lg);
+  line-height: 24px;
+  display: inline-block;
+  max-width: 100%;
+}
+.content1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 33px;
+  max-width: 100%;
+}
+.frame-child104,
+.funding-tools {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.funding-tools {
+  width: 589px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 263px 0 0;
+  min-width: 589px;
+}
+.frame-child104 {
+  height: 95px;
+  width: 772px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  display: none;
+}
+.email-adderss-or2 {
+  width: 302px;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-xl);
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  color: var(--color-darkgray);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 1;
+}
+.frame-child105,
+.rectangle-parent36 {
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.rectangle-parent36 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-14xl) var(--padding-27xl) var(--padding-15xl);
+}
+.frame-child105 {
+  height: 95px;
+  width: 772px;
+  position: relative;
+  display: none;
+}
+.password2 {
+  width: 93px;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-xl);
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  color: var(--color-darkgray);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 1;
+}
+.rectangle-parent37 {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-14xl) var(--padding-27xl) var(--padding-15xl);
+  max-width: 100%;
+}
+.log-in2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  min-width: 95px;
+  white-space: nowrap;
+}
+.login-button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mid) var(--padding-xl);
+  background-color: var(--color-mediumslateblue);
+  align-self: stretch;
+  border-radius: var(--br-6xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.login-button:hover {
+  background-color: var(--color-blueviolet);
+}
+.forgotten-password2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-inter);
+  color: var(--color-silver-200);
+  text-align: left;
+}
+.password-reset {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.divider1 {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  border-top: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+}
+.create-new-account2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  white-space: pre-wrap;
+  text-align: left;
+}
+.new-account-button,
+.new-account-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.new-account-button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mid) var(--padding-xl);
+  background-color: var(--color-limegreen);
+  width: 502px;
+  border-radius: var(--br-6xs);
+  box-sizing: border-box;
+}
+.new-account-button:hover {
+  background-color: var(--color-green);
+}
+.new-account-button-wrapper {
+  align-self: stretch;
+}
+.house-login,
+.login-form1 {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.login-form1 {
+  margin: 0;
+  width: 825px;
+  box-shadow: 0 0 50.6px 3px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-23xl);
+  background-color: var(--color-white);
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: var(--padding-51xl) var(--padding-6xl) var(--padding-51xl)
+    var(--padding-7xl);
+  gap: var(--gap-19xl-8);
+  min-width: 825px;
+  max-width: 100%;
+}
+.house-login {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #000, #fcfffe);
+  flex-direction: row;
+  padding: var(--padding-123xl) 120px var(--padding-246xl);
+  gap: var(--gap-33xl);
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1625px) {
+  .funding-tools,
+  .login-form1 {
+    flex: 1;
+  }
+  .house-login {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .login-form1 {
+    min-width: 100%;
+  }
+  .house-login {
+    padding-left: var(--padding-41xl);
+    padding-right: var(--padding-41xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 900px) {
+  .make-your-life {
+    font-size: var(--font-size-19xl);
+    line-height: 42px;
+  }
+  .content1 {
+    gap: var(--gap-base);
+  }
+  .funding-tools {
+    min-width: 100%;
+  }
+  .create-new-account2,
+  .forgotten-password2,
+  .log-in2 {
+    font-size: var(--font-size-7xl);
+  }
+  .login-form1 {
+    padding-top: var(--padding-26xl);
+    padding-bottom: var(--padding-26xl);
+    box-sizing: border-box;
+  }
+  .house-login {
+    gap: 26px;
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .make-your-life {
+    font-size: var(--font-size-10xl);
+    line-height: 31px;
+  }
+  .funding-tools {
+    padding-top: 171px;
+    box-sizing: border-box;
+  }
+  .email-adderss-or2 {
+    font-size: var(--font-size-base);
+  }
+  .rectangle-parent36 {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .password2 {
+    font-size: var(--font-size-base);
+  }
+  .create-new-account2,
+  .forgotten-password2,
+  .log-in2 {
+    font-size: var(--font-size-lgi);
+  }
+  .login-form1 {
+    gap: var(--gap-lgi);
+  }
+}

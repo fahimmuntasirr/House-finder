@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {%load static%}
+    <link rel="stylesheet" href="{% static './global.css'%}" />
+    <link rel="stylesheet" href="{% static './house-signup.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind Siliguri:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="house-signup">
+      <section class="input-fields">
+        <div class="input-fields-child"></div>
+        <div class="signup-button">
+          <div class="sign-up-parent1">
+            <b class="sign-up6">Sign Up</b>
+            <div class="its-quick-and2">It's quick and easy.</div>
+          </div>
+          {% if messages %} {{message.tags}}
+          <div role="alert" style="color: red">
+            {% for message in messages %} {{ message }} {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="name-input">
+            <div class="first-name-parent2">
+              <input
+                class="first-name5"
+                placeholder="First name"
+                type="text"
+                name="first_name"
+              />
+
+              <div class="frame-child90"></div>
+            </div>
+            <div class="first-name-parent3">
+              <input
+                class="first-name6"
+                placeholder="Last name"
+                type="text"
+                name="last_name"
+              />
+
+              <div class="frame-child91"></div>
+            </div>
+          </div>
+          <div class="input">
+            <div class="mobile-nuber-or-email-address-parent2">
+              <input
+                class="mobile-nuber-or4"
+                placeholder="Mobile nuber or email address"
+                type="text"
+                name="username"
+              />
+
+              <div class="frame-child92"></div>
+            </div>
+          </div>
+          <div class="input1">
+            <div class="mobile-nuber-or-email-address-parent3">
+              <input
+                class="mobile-nuber-or5"
+                placeholder="Password"
+                type="text"
+                name="password"
+              />
+
+              <div class="frame-child93"></div>
+            </div>
+          </div>
+          <div class="input1">
+            <div class="mobile-nuber-or-email-address-parent3">
+              <input
+                class="mobile-nuber-or5"
+                placeholder="Address"
+                type="text"
+                name="address"
+              />
+
+              <div class="frame-child93"></div>
+            </div>
+          </div>
+          <span>Upload a picture</span>
+          <div class="input1">
+            <div class="mobile-nuber-or-email-address-parent3">
+              <input
+                class="mobile-nuber-or5"
+                placeholder="Address"
+                type="file"
+                name="dp"
+                style="height: 30px"
+              />
+
+              <div class="frame-child93"></div>
+            </div>
+          </div>
+          <div class="input">
+            <div class="mobile-nuber-or-email-address-parent2">
+              <input
+                class="mobile-nuber-or4"
+                placeholder="Mobile nuber or email address"
+                type="date"
+                name="date"
+              />
+
+              <div class="frame-child92"></div>
+            </div>
+          </div>
+          <div class="birth-date">
+            <div class="month-selection"></div>
+          </div>
+          <div class="gender-selection">
+            <div class="gender-input">
+              <div class="gender2">Gender</div>
+            </div>
+            <div class="gender-options">
+              <div class="female-container">
+                <span>Female</span>
+                <input
+                  class="female2"
+                  placeholder="Female"
+                  value="Female"
+                  type="radio"
+                  name="gender"
+                />
+
+                <div class="frame-child97"></div>
+                <div class="gender-icon-wrapper">
+                  <div class="gender-icon"></div>
+                </div>
+              </div>
+              <div class="male-container">
+                <span>Male</span>
+                <input
+                  class="male2"
+                  placeholder="Male"
+                  value="Male"
+                  type="radio"
+                  name="gender"
+                />
+
+                <div class="frame-child98"></div>
+                <div class="ellipse-wrapper4">
+                  <div class="frame-child99"></div>
+                </div>
+              </div>
+              <div class="custom-container">
+                <span>Others</span>
+                <input
+                  class="custom2"
+                  placeholder="Custom"
+                  value="Custom"
+                  type="radio"
+                  name="gender"
+                />
+
+                <div class="frame-child100"></div>
+                <div class="ellipse-wrapper5">
+                  <div class="frame-child101"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-link-wrapper">
+            <div class="login-link">
+              <div class="have-an-account1">
+                Have an account?
+                <a
+                  href="/house_login/"
+                  style="text-decoration: none; color: white"
+                  >Login</a
+                >
+              </div>
+              <div class="signup-link">
+                <button class="signup-call-to-action">
+                  <b class="sign-up7">Sign UP</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

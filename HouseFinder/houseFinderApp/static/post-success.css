@@ -1,0 +1,95 @@
+.thank-you-for2 {
+  position: relative;
+}
+.line-mdcircle-to-confirm-circ-icon1 {
+  height: 282px;
+  width: 282px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.line-mdcircle-to-confirm-circ-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-3xl) 0 var(--padding-xl);
+}
+.thank-you-for-your-post-parent {
+  width: 468px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.back-to-home2 {
+  position: relative;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+}
+.back-to-home-frame {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-mid) var(--padding-xl);
+  background-color: var(--color-silver-200);
+  flex: 1;
+  border-radius: var(--br-6xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.back-to-home-frame:hover {
+  background-color: #878787;
+}
+.post-success,
+.post-success-inner {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.post-success-inner {
+  width: 468px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 40px;
+  max-width: 100%;
+}
+.post-success {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 278px var(--padding-xl) 386px var(--padding-3xl);
+  gap: var(--gap-19xl);
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .thank-you-for2 {
+    font-size: var(--font-size-13xl);
+  }
+}
+@media screen and (max-width: 675px) {
+  .post-success {
+    gap: var(--gap-lgi);
+  }
+}
+@media screen and (max-width: 450px) {
+  .thank-you-for2 {
+    font-size: var(--font-size-5xl);
+  }
+}
