@@ -27,7 +27,7 @@ urlpatterns = [
     path('house_login/',house_login,name='house_login'),
     path('post_success/',post_success,name='post_success'),
     path('post/',post,name='post'),
-    path('product_page/',product_page,name='product_page'),
+    path('product_page/<id>/',product_page,name='product_page'),
     path('profile1/<id>/',profile1,name='profile1'),
     path('logout_page/',logout_page,name='logout_page'),
     path('admin/', admin.site.urls),

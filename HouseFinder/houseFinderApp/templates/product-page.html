@@ -33,7 +33,7 @@
         <div class="rectangle-parent34">
           <div class="frame-child88"></div>
           <div class="back-to-home-container">
-            <b class="back-to-home1"><a href="index.html" style="text-decoration: none; color: white;">Back to Home</a></b>
+            <b class="back-to-home1"><a href="/" style="text-decoration: none; color: white;">Back to Home</a></b>
           </div>
         </div>
         <div class="wrapper-rectangle-6-parent">
@@ -42,45 +42,44 @@
               class="wrapper-rectangle-6-child"
               loading="lazy"
               alt=""
-              src="public/image2.png"
+              src="/media/{{product.product_pic}}"
               style="width: 500px;"
             />
           </div>
           <div class="contact-info">
             <div class="wonderful-flat-for-2-person-parent">
-              <h2 class="wonderful-flat-for">Wonderful Flat for 2 person</h2>
-              <div class="charabag-ashulia-dhaka">Charabag, Ashulia, Dhaka</div>
+              <h2 class="wonderful-flat-for">{{product.product_title}}</h2>
+              <div class="charabag-ashulia-dhaka">{{product.product_address}}</div>
             </div>
-            <div class="it-is-long-established-fact-th-wrapper">
+            <div class="it-is-long-established-fact-th-wrapper" style="width: 800px;">
               <div class="it-is-long-container1">
                 <p class="it-is-long1">
-                  It is long established fact that reader will distract by the
-                  readable
+                  {{product.product_description}}
                 </p>
-                <p class="content-a-page1">
+                <!-- <p class="content-a-page1">
                   content a page when looking atten layout. The point of using
                   and
                 </p>
                 <p class="that-it-has1">
                   that it has a normal distribution of letters.
-                </p>
+                </p> -->
               </div>
             </div>
             <div class="the-flat-is-for-parent">
               <div class="the-flat-is">The flat is for:</div>
               <div class="everyone-wrapper">
-                <div class="everyone">Everyone</div>
+                <div class="everyone">{{product.require}}</div>
               </div>
             </div>
             <div class="contact1">Contact:</div>
-            <div class="contact-title">01721684387</div>
+            <div class="contact-title">{{product.product_contact}}</div>
           </div>
         </div>
       </section>
       <footer class="footer">
         <div class="footer-content">
           <div class="house-finder-parent">
-            <div class="house-finder"><a href="index.html" style="text-decoration: none; color: black;">House Finder</a></div>
+            <div class="house-finder"><a href="/" style="text-decoration: none; color: black;">House Finder</a></div>
             <div class="welcome-and-open-container1">
               <p class="welcome-and-open1">Welcome and open yourself to your</p>
               <p class="truest-love-this1">

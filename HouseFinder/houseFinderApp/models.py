@@ -9,6 +9,8 @@ class user_details(models.Model):
     product_contact = models.IntegerField(null=True, blank=True)
     product_address = models.CharField(max_length=100,null=True, blank=True)
     product_description = models.CharField(max_length=500, null=True, blank=True)
+    product_price = models.IntegerField(null=True, blank=True)
+    product_title = models.CharField(max_length=500, null=True, blank=True)
     require = models.CharField(max_length=100,null=True, blank=True)
     if_posted = models.IntegerField(null=True, blank=True)
     date = models.DateField(null=True, blank=True)

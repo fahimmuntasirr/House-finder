@@ -6,7 +6,7 @@
     {%load static%}
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Vite App</title>
+    <title>House Finder</title>
 </head>
 <body>
 
@@ -25,7 +25,7 @@
         </p>
         <div class="mt-8">
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-                <a href="#featured_home" style="text-decoration: none; color: white;">Start Searching</a>
+                <a href="#search22" style="text-decoration: none; color: white;">Start Searching</a>
             </button>
             <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
                 <a href="/post/" style="text-decoration: none; color: white;">Post a Home</a>
@@ -41,9 +41,10 @@
         </div>
     </div>
 </div>
+<form enctype="multipart/form-data">
 <div class="container mx-auto my-12 px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-        <div class="space-y-2">
+        <!-- <div class="space-y-2">
             <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     for="location"
@@ -54,9 +55,10 @@
                     class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="location"
                     placeholder="Enter a city or neighborhood"
+                    name="search1"
             />
-        </div>
-        <div class="space-y-2">
+        </div> -->
+        <!-- <div class="space-y-2">
             <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     for="price-range"
@@ -66,92 +68,62 @@
             <input
                     class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="price-range"
-                    placeholder="$500 - $2,000"
+                    placeholder="500 - $2,000"
             />
 
-        </div>
+        </div> -->
         <div class="space-y-2">
             <label
                     class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     for="bedrooms"
             >
-                Bedrooms
+                Require
             </label>
             <input
                     class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     id="bedrooms"
-                    placeholder="1-4"
+                    placeholder="Bachelor/Girls/Family"
+                    name="search"
             />
         </div>
         <div class="flex items-end">
-            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-primary/90 h-10 px-4 py-2 w-full">
+            <button id="search22" type="search" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-primary/90 h-10 px-4 py-2 w-full">
                 Search
             </button>
         </div>
     </div>
 </div>
+</form>
 <div class="container mx-auto my-12 px-4 sm:px-6 lg:px-8">
     <div class="mb-8 text-center">
         <h2 class="text-3xl font-bold sm:text-4xl" id="featured_home">Featured Homes</h2>
         <p class="mt-4 text-gray-500">Check out our selection of the best rental properties.</p>
     </div>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% for q in queryset %}
+        {% if q.if_posted %}
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
             <img
-                    src="{% static 'public/image1.png'%}"
+                    src="/media/{{q.product_pic}}"
                     alt="Home 1"
                     class="h-48 w-full object-cover"
 
                     style="aspect-ratio: 400 / 300; object-fit: cover;"
             />
             <div class="p-4">
-                <h3 class="text-lg font-bold">Modern Apartment</h3>
-                <p class="mt-2 text-gray-500">$1,800/month</p>
+                <h3 class="text-lg font-bold">{{q.product_title}}</h3>
+                <p class="mt-2 text-gray-500">{{q.product_price}}TK/month</p>
+                <p class="mt-2 text-gray-500">{{q.product_address}}</p>
+                <p class="mt-2 text-gray-500">{{q.require}}</p>
                 <div class="mt-4">
-                    <a class="text-blue-500 hover:underline" href="product-page.html">
+                    <a class="text-blue-500 hover:underline" href="/product_page/{{q.id}}/">
                         View Details
                     </a>
                 </div>
             </div>
         </div>
-        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-            <img
-                    src="public/image2.png"
-                    alt="Home 2"
-                    class="h-48 w-full object-cover"
-                    width="400"
-                    height="300"
-                    style="aspect-ratio: 400 / 300; object-fit: cover;"
-            />
-            <div class="p-4">
-                <h3 class="text-lg font-bold">Cozy Townhouse</h3>
-                <p class="mt-2 text-gray-500">$2,200/month</p>
-                <div class="mt-4">
-                    <a class="text-blue-500 hover:underline" href="product-page.html">
-                        View Details
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-            <img
-                    src="{% static 'public/image3.png'%}"
-                    alt="Home 3"
-                    class="h-48 w-full object-cover"
-                    width="400"
-                    height="300"
-                    style="aspect-ratio: 400 / 300; object-fit: cover;"
-            />
-            <div class="p-4">
-                <h3 class="text-lg font-bold">Luxury Penthouse</h3>
-                <p class="mt-2 text-gray-500">$3,500/month</p>
-                <div class="mt-4">
-                    <a class="text-blue-500 hover:underline" href="product-page.html">
-                        View Details
-                    </a>
-                </div>
-            </div>
-        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
 
@@ -244,7 +216,8 @@
                 </ul>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500">© 2024 Home Rentals. All rights reserved.</div>
+        <div class="mt-8 text-center text-gray-500">Developed by Fahim Muntasir (222-15-6210)</div>
+        <div class="mt-8 text-center text-gray-500">© 2024 House Finder. All rights reserved.</div>
     </div>
 </footer>
 

@@ -37,64 +37,125 @@
             <b class="sign-up6">Update Your profile</b>
             <div class="its-quick-and2">It's quick and easy.</div>
             <div>
-              <img src="{% static 'public/hero.jpg'%}" alt="Nothing" style="border-radius: 10px; position: relative; left: 50%; transform: translateX(-50%); height: 300px;">
+              <img
+                src="/media/{{user.user_details.product_pic}}/"
+                alt="Nothing"
+                style="
+                  border-radius: 10px;
+                  position: relative;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  height: 300px;
+                "
+              />
             </div>
           </div>
         </div>
-        <span style="position: relative; margin-right: 79%; margin-bottom: -1%;">Upload a picture</span>
         <form method="post" enctype="multipart/form-data">
           {% csrf_token %}
-          <div class="name-input" style="margin-top: -20px;">
-            <div class="first-name-parent2" style="width: 100%;">
-              <input class="first-name5" placeholder="First name" type="text" name="first_name"/>
+          <div class="name-input" style="margin-top: -20px">
+            <div class="first-name-parent2" style="width: 100%">
+              <input
+                class="first-name5"
+                placeholder="Title"
+                type="text"
+                value="{{user.user_details.product_title}}"
+                name="product_title"
+                style="width: 800px;"
+              />
 
               <div class="frame-child90"></div>
             </div>
           </div>
-          <span>Upload a picture</span>
-          <div class="input" style="margin-top: 10px;">
+          <input
+            type="text"
+            name="username"
+            value="{{user.username}}"
+            style="position: absolute; visibility: hidden"
+            required
+          />
+          <span>Price</span>
+          <div class="input" style="margin-top: 10px">
             <div class="mobile-nuber-or-email-address-parent2">
               <input
                 class="mobile-nuber-or4"
-                placeholder="Mobile nuber or email address"
-                type="text"
-                name="username"
+                type="number"
+                name="product_price"
+                value="{{user.user_details.product_price}}"
+                required
               />
 
               <div class="frame-child92"></div>
             </div>
           </div>
-          <span>Upload a picture</span>
-          <div class="input1" style="margin-top: 10px;">
+          <span>Mobile Number</span>
+          <div class="input" style="margin-top: 10px">
+            <div class="mobile-nuber-or-email-address-parent2">
+              <input
+                class="mobile-nuber-or4"
+                placeholder="Mobile nuber or email address"
+                type="number"
+                name="product_contact"
+                value="{{user.user_details.product_contact}}"
+                required
+              />
+
+              <div class="frame-child92"></div>
+            </div>
+          </div>
+          <span>Adress</span>
+          <div class="input1" style="margin-top: 10px">
             <div class="mobile-nuber-or-email-address-parent3">
               <input
                 class="mobile-nuber-or5"
                 placeholder="Address"
                 type="text"
-                name="address"
+                name="product_address"
+                value="{{user.user_details.product_address}}"
+                required
               />
 
               <div class="frame-child93"></div>
             </div>
           </div>
+          <span>Description</span>
+          <div class="input1" style="margin-top: 10px">
+            <div class="mobile-nuber-or-email-address-parent3">
+              <!-- <input
+                class="mobile-nuber-or5"
+                placeholder="Address"
+                type="text"
+                name="product_description"
+              /> -->
+              <textarea
+                class="mobile-nuber-or5"
+                name="product_description"
+                id=""
+                style="height: 200px; width: 800px"
+                required
+              >
+              {{user.user_details.product_description}} 
+              </textarea>
+
+              <div class="frame-child93"></div>
+            </div>
+          </div>
           <span>Upload a picture</span>
-          <div class="input" >
+          <div class="input">
             <div class="mobile-nuber-or-email-address-parent2">
               <input
                 class="mobile-nuber-or4"
                 placeholder="Mobile nuber or email address"
                 type="file"
-                name="file"
-                style="height: 30px;"
+                name="product_pic"
+                style="height: 30px"
               />
 
               <div class="frame-child92"></div>
             </div>
           </div>
           <div class="birth-date">
-            <div class="month-selection">
-              
-            </div>
+            <div class="month-selection"></div>
           </div>
           <div class="gender-selection">
             <div class="gender-input">
@@ -103,7 +164,14 @@
             <div class="gender-options">
               <div class="female-container">
                 <span>Bachelor</span>
-                <input class="female2" placeholder="Female" type="radio" name="gender"/>
+                <input
+                  class="female2"
+                  placeholder="Female"
+                  type="radio"
+                  name="require"
+                  value="Bachelor"
+                  required
+                />
 
                 <div class="frame-child97"></div>
                 <div class="gender-icon-wrapper">
@@ -112,7 +180,14 @@
               </div>
               <div class="male-container">
                 <span>Girls</span>
-                <input class="male2" placeholder="Male" type="radio" name="gender" />
+                <input
+                  class="male2"
+                  placeholder="Male"
+                  type="radio"
+                  name="require"
+                  value="Girls"
+                  required
+                />
 
                 <div class="frame-child98"></div>
                 <div class="ellipse-wrapper4">
@@ -121,7 +196,14 @@
               </div>
               <div class="custom-container">
                 <span>Family</span>
-                <input class="custom2" placeholder="Custom" type="radio" name="gender" />
+                <input
+                  class="custom2"
+                  placeholder="Custom"
+                  type="radio"
+                  name="require"
+                  value="Family"
+                  required
+                />
 
                 <div class="frame-child100"></div>
                 <div class="ellipse-wrapper5">
@@ -133,10 +215,13 @@
           <div class="login-link-wrapper">
             <div class="login-link">
               <div class="signup-link">
-                <button class="signup-call-to-action" style="margin-top: 20px;">
-                  <b class="sign-up7" style="text-align: center;">Post</b>
-                </button>
+                <button class="signup-call-to-action" style="margin-top: 20px">
+                  <b class="sign-up7" style="text-align: center">Save and post</b>
+                </button>                
               </div>
+              <p class="signup-call-to-action" style="margin-top: 0px; margin-left: 20%;">
+                <b class="sign-up7" style="text-align: center"><a href="/" style="text-decoration: none;  color: white; ">Go to home</a></b>
+              </p>
             </div>
           </div>
         </form>

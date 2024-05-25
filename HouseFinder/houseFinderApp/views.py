@@ -6,10 +6,44 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    queryset = user_details.objects.all()
+    if request.GET.get('search'):
+        queryset = queryset.filter(require__icontains = request.GET.get('search'))
+        # queryset = queryset.filter(product_address__icontains = request.GET.get('search2'))
+    context = {'queryset' : queryset}
+    return render(request, 'index.html', context)
 
 @login_required(login_url="/house_login/")
 def post(request):
+    if request.method == 'POST':
+        product_contact = request.POST.get('product_contact')
+        product_address = request.POST.get('product_address')
+        product_price = request.POST.get('product_price')
+        product_description = request.POST.get('product_description')
+        username = request.POST.get('username')
+        require = request.POST.get('require')
+        # date = request.POST.get('date')
+        product_pic = request.FILES.get('product_pic')
+        # product_address = request.POST.get('product_address')
+        product_title = request.POST.get('product_title')
+
+        user1 = User.objects.filter(username=username).first()
+
+        user_detail = user_details.objects.get(user = user1)
+        if product_contact:
+            user_detail.product_contact = product_contact
+        if product_pic:
+            user_detail.product_pic = product_pic
+        if product_price:
+            user_detail.product_price = product_price
+        if require:
+            user_detail.require = require
+        user_detail.product_address = product_address
+        user_detail.product_title = product_title
+        user_detail.product_description = product_description
+        user_detail.if_posted = 1
+        user_detail.save()
+        return redirect('/post_success/')
     return render(request, 'post.html')
 
 def house_login(request):
@@ -62,6 +96,7 @@ def house_signup(request):
             date = date,
             gender = gender,
             address = address,
+            if_posted = 0,
         )
         # user_detail.save()
         # messages.success(request, 'Account created Successfully')
@@ -71,8 +106,10 @@ def house_signup(request):
 def post_success(request):
     return render(request, 'post-success.html')
 
-def product_page(request):
-    return render(request, 'product-page.html')
+def product_page(request,id):
+    product = user_details.objects.get(id=id)
+    context = {'product' : product}
+    return render(request, 'product-page.html', context)
 
 @login_required(login_url="/house_login/")
 def profile1(request,id):
