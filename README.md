@@ -1,2 +1,2 @@
 # House finder
- This website is created by Html, Css, Django
+ This website is created by Django, HTML, CSS
